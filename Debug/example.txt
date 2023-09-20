@@ -1,0 +1,151 @@
+#This is the world json where you can define the world for your zork game, follow this instructions:
+#First create rooms using the example structure, name and description and before the opening brackets I reccomend to store the
+#position of the room starting with 0
+
+#You can use comments to help identify rooms: RoomID = 0
+{
+    Type: Room
+    name: Treasure room
+    description: Valley of treasures
+}
+# RoomID = 1
+{
+    Type: Room
+    name: Forest
+    description: The middle room
+}
+#RoomID = 2
+{
+    Type: Room
+    name: Forest entry
+    description: You see a deep forest
+}
+#RoomID = 3
+{
+    Type: Room
+    name: Village outskirts
+    description: You are getting out of the village
+}
+#RoomID = 4
+{
+    Type: Room
+    name: First room
+    description: The initial room
+}
+
+#Once you have the rooms then connect them using exits, room_id is the room that will contain the exit, direction is the input 
+#that the game expects to use the exit when you are in that room, and exit_id is the room that the creature moved will go to.
+
+
+#This first exit for example defines that the room 1 (the Forest in the example file) will have an exit when going north/n
+#that will move a creature to the room 0(the treasure room in the example file)
+{
+    Type: Exit
+    room_id: 1
+    direction: north
+    exit_id: 0
+}
+{
+    Type: Exit
+    room_id: 2
+    direction: north
+    exit_id: 1
+}
+{
+    Type: Exit
+    room_id: 3
+    direction: north
+    exit_id: 2
+}
+{
+    Type: Exit
+    room_id: 4
+    direction: north
+    exit_id: 3
+}
+
+{
+    Type: Exit
+    room_id: 0
+    direction: south
+    exit_id: 1
+}
+{
+    Type: Exit
+    room_id: 1
+    direction: south
+    exit_id: 2
+}
+{
+    Type: Exit
+    room_id: 2
+    direction: south
+    exit_id: 3
+}
+{
+    Type: Exit
+    room_id: 3
+    direction: south
+    exit_id: 4
+}
+
+#When you have your map defined it is time for your creatures, similarly you have to place them in a room by giving the room id
+
+#A dragon is a creature that you will have to distract to advance North try building a *Bait*
+#Dragon entity id = 5 because exits are not entities
+{
+    Type: Creature
+    name: Dragon
+    description: A fearsome dragon
+    room_id: 1
+}
+#Player entity ID=6 because exits are not entities
+{
+    Type: Player
+    name: YourName
+    description: Your description
+    room_id: 4
+}
+
+#Finally define the default items and place them in rooms or creatures, be careful you might not be able yet to steal items 
+#from other creatures, but if the player has an item from the begining you will be able to use it.
+#Take into consideration the owner is the entity holding the item (items can hold items too!) and the item size defines its
+#weight which determines if you can pick it up as the player.
+
+{
+    Type: Item
+    name: Stick
+    description: I am a stick!
+    item_size: 2
+    owner: 6
+}
+
+{
+    Type: Item
+    name: Rock
+    description: I am a rock!
+    item_size: 9
+    owner: 4
+}
+
+{
+    Type: Item
+    name: Paper
+    description: I am a paper!
+    item_size: 1
+    owner: 4
+}
+{
+    Type: Item
+    name: bagpack
+    description: Increase your item capacity to 15!
+    item_size: 0
+    owner: 2
+}
+{
+    Type: Item
+    name: gold
+    description: Yaaaay! You are rich!
+    item_size: 7
+    owner: 0
+}

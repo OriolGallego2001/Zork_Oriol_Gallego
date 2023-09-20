@@ -1,0 +1,16 @@
+﻿  action.cpp
+  creature.cpp
+  entity.cpp
+  globals.cpp
+C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\globals.cpp(7,28): warning C4552: "<": el resultado de la expresión no se usa
+  item.cpp
+  player.cpp
+  room.cpp
+  world.cpp
+  Zork.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\creature.cpp(45): warning C4715: 'creature::check_dragon': no todas las rutas de acceso de control devuelven un valor
+  All 660 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Zork.vcxproj -> C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\Release\Zork.exe

@@ -1,0 +1,12 @@
+﻿  Zork.cpp
+  creature.cpp
+  entity.cpp
+  globals.cpp
+C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\globals.cpp(7,28): warning C4552: "<": el resultado de la expresión no se usa
+  item.cpp
+  player.cpp
+  room.cpp
+  world.cpp
+  Generando código...
+C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\creature.cpp(45): warning C4715: 'creature::check_dragon': no todas las rutas de acceso de control devuelven un valor
+  Zork.vcxproj -> C:\Users\oriol\OneDrive\Documentos\Documents Uni\Zork\Debug\Zork.exe
