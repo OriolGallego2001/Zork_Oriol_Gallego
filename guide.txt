@@ -1,0 +1,13 @@
+The goal of the game is to obtain the gold guarded by a dragon. To accomplish this you must pick up first all the items.
+
+In the first room you can start picking up a Paper(input: "pick Paper"), and you already begin with a Stick.
+
+Then if you move two rooms north(input: "n", input:"n") there is a bagpack which increases your capacity to hold items, pick it up too (input:"pick bagpack")
+
+After picking up the bagpack go south again to the initial room, where there is a Rock and pick it up. (input: "s", input: "s", input:"pick Rock")
+
+Once you have all the items you can go north until a dragon blocks your path (input: "n" four times) 
+
+There you will have to build a Bait to advance (input: "build Bait") 
+
+Finally you can go north and pick the gold and finish the game (input: "n", input:"pick gold").
